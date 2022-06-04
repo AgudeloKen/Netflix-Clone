@@ -16,7 +16,7 @@ const Main = ({ movies }) => {
         alt=""
         objectFit="cover"
       />
-      <div className="relative flex flex-col justify-center pl-8 md:pl-12 space-y-4 h-full">
+      <div className="relative flex flex-col justify-center  md:pl-12 space-y-4 h-full">
         <h1 className="text-center md:text-left max-w-lg md:max-w-2xl text-white font-bold text-5xl md:text-3xl mt-24 md:mt-10">
           {movie?.title || movie?.name || movie?.original_title}
         </h1>
