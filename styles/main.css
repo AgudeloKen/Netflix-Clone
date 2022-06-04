@@ -1063,6 +1063,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-radius: 0.25rem;
   }
 
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
