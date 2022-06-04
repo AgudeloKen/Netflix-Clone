@@ -41,7 +41,7 @@ const Navbar = () => {
       <nav className="flex items-center justify-between w-full">
         <div className="flex w-full space-x-6 items-center">
           <Image src={logo} alt="netflix" width={80} height={20} />
-          <ul className="flex space-x-4 text-white font-light text-sm md:text-lg">
+          <ul className="flex space-x-4 text-white justify-center md:justify-start font-light text-sm md:text-lg">
             <li>
               <Link href="/home">
                 <a>Home</a>
