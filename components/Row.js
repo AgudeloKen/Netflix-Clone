@@ -28,7 +28,7 @@ const Row = ({ title, movies }) => {
           ref={rowRef}
           className="flex h-40 items-center space-x-2 overflow-x-scroll oveflow-y-hidden scrollbar-hide"
         >
-          {movies.map((movie) => (
+          {movies?.map((movie) => (
             <Thumbnail key={movie.id} movie={movie} />
           ))}
         </div>
