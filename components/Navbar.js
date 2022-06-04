@@ -8,7 +8,6 @@ import { BsSearch, BsBell } from "react-icons/bs";
 import { AiFillCaretDown } from "react-icons/ai";
 const Navbar = () => {
   const [search, setSearch] = useState(false);
-  const [input, setInput] = useState("");
   const [nav, setNav] = useState(false);
   const { data, status } = useSession();
   const router = useRouter();
@@ -30,9 +29,7 @@ const Navbar = () => {
     }
   };
   window.addEventListener("scroll", changeColor);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+
   return (
     <div
       className={
@@ -45,7 +42,11 @@ const Navbar = () => {
         <div className="flex w-full space-x-6 items-center">
           <Image src={logo} alt="netflix" width={80} height={20} />
           <ul className="flex space-x-4 text-white">
-            <li>Home</li>
+            <li>
+              <Link href="/home">
+                <a>Home</a>
+              </Link>
+            </li>
             <li>TV Shows</li>
             <li>Movies</li>
             <li>New & Popular</li>
@@ -59,7 +60,7 @@ const Navbar = () => {
             />
             {search ? (
               <form
-                onSubmit={handleSubmit}
+                onSubmit={(e) => e.preventDefault()}
                 className={
                   search
                     ? "flex items-center justify-center absolute border-2 border-white bg-bop w-40 h-10 z-10 p-4 top-9 -right-2"
@@ -69,8 +70,6 @@ const Navbar = () => {
                 <input
                   type="text"
                   placeholder="Search..."
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
                   className="w-full bg-transparent focus:outline-none caret-white py-2 text-white text-sm"
                 />
 
@@ -113,7 +112,7 @@ const Navbar = () => {
             </div>
             <div className="hidden absolute border-2 border-inse border-white bg-bop w-32 h-20 z-10 right-2 top-12 group-hover:flex flex-col items-center justify-center text-white">
               <AiFillCaretDown className="text-base rotate-180 absolute -top-3 right-5 group-hover:flex" />
-              <Link href="/">
+              <Link href="/account">
                 <a className="flex items-center py-1">Account</a>
               </Link>
               <button

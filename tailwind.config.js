@@ -14,6 +14,9 @@ module.exports = {
         github: "#171515",
         facebook: "#3b5998",
       },
+      height: {
+        banner: "85vh",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

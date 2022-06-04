@@ -1,3 +1,4 @@
+import { getSession } from "next-auth/react";
 import Layout from "../components/Layout";
 import Main from "../components/Main";
 import Row from "../components/Row";
@@ -16,7 +17,7 @@ const Home = ({
   return (
     <Layout>
       <Main movies={netflixOriginals} />
-      <div className="min-h-screen space-y-10">
+      <div className="min-h-screen h-auto space-y-10">
         <Row title="Trending Now" movies={trendingNow} />
         <Row title="Top Rated" movies={topRated} />
         <Row title="Action" movies={actionMovies} />
@@ -30,7 +31,16 @@ const Home = ({
 };
 export default Home;
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const [
     netflixOriginals,
     trendingNow,

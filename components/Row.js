@@ -17,7 +17,7 @@ const Row = ({ title, movies }) => {
     }
   };
   return (
-    <div className="h-40 space-y-2 mt-2 pl-8">
+    <div className="relative h-40 space-y-2 mt-2 pl-12">
       <h2 className="font-bold text-white text-2xl">{title}</h2>
       <div className="group relative flex items-center">
         <AiOutlineLeft
