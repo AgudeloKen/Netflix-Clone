@@ -10,9 +10,9 @@ const Account = ({ session }) => {
     <Layout>
       <div className="flex flex-col items-center justify-end h-96 w-full text-white">
         <h1 className="text-3xl">Account</h1>
-        <hr className="w-4/5 mx-auto" />
-        <div className="flex w-4/5 mx-auto">
-          <div className="w-4/5 mx-auto flex flex-col space-y-2 my-2">
+        <hr className="w-full md:w-4/5 mx-auto" />
+        <div className="flex w-full md:w-4/5 mx-auto">
+          <div className="w-11/12 md:w-4/5 mx-auto flex flex-col space-y-2 my-2">
             <div className="w-full flex justify-between">
               <p>{user.name}</p>
               <p className="text-zinc-500">Change account name</p>

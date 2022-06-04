@@ -14,7 +14,7 @@ export default function Home() {
         layout="fill"
         className="bg-cover overflow-hidden filter brightness-50 absolute"
       />
-      <div className="absolute top-0 left-4">
+      <div className=" hidden  sm:block absolute top-0 left-4">
         <Link href="/">
           <a>
             <Image src={logo} alt="netflix" width={200} height={120} />

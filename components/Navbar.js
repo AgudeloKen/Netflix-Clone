@@ -41,21 +41,21 @@ const Navbar = () => {
       <nav className="flex items-center justify-between w-full">
         <div className="flex w-full space-x-6 items-center">
           <Image src={logo} alt="netflix" width={80} height={20} />
-          <ul className="flex space-x-4 text-white">
+          <ul className="flex space-x-4 text-white font-light text-sm md:text-lg">
             <li>
               <Link href="/home">
                 <a>Home</a>
               </Link>
             </li>
-            <li>TV Shows</li>
+            <li className="hidden md:block">TV Shows</li>
             <li>Movies</li>
-            <li>New & Popular</li>
+            <li className="hidden md:block">New & Popular</li>
           </ul>
         </div>
         <div className="flex items-center space-x-4">
           <div className="group relative">
             <BsSearch
-              className="text-2xl text-white font-bold cursor-pointer"
+              className="text-2xl text-white font-bold cursor-pointer hidden md:block"
               onClick={() => setSearch(!search)}
             />
             {search ? (
@@ -80,7 +80,7 @@ const Navbar = () => {
             )}
           </div>
           <div className="group relative">
-            <BsBell className="text-2xl text-white cursor-pointer" />
+            <BsBell className="text-2xl text-white cursor-pointer hidden md:block" />
             <div className="hidden absolute border-2  border-white bg-bop w-72 h-56 z-10 p-4 -right-2 top-9 group-hover:flex flex-col items-center  text-white space-y-3">
               <AiFillCaretDown className="text-base rotate-180 absolute -top-3 right-3" />
               <p className="text-sm">

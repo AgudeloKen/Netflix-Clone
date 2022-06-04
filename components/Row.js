@@ -21,7 +21,7 @@ const Row = ({ title, movies }) => {
       <h2 className="font-bold text-white text-2xl">{title}</h2>
       <div className="group relative flex items-center">
         <AiOutlineLeft
-          className="absolute left-2 text-4xl text-white opacity-0 hover:scale-125 cursor-pointer transition-all ease-in duration-500 group-hover:opacity-100 group-hover:bg-bop z-10"
+          className="hidden md:block absolute left-2 text-4xl text-white opacity-0 hover:scale-125 cursor-pointer transition-all ease-in duration-500 group-hover:opacity-100 group-hover:bg-bop z-10"
           onClick={() => handleClick("left")}
         />
         <div
@@ -33,7 +33,7 @@ const Row = ({ title, movies }) => {
           ))}
         </div>
         <AiOutlineRight
-          className="absolute right-2  text-4xl text-white opacity-0 hover:scale-125 cursor-pointer transition-all ease-in duration-500 group-hover:opacity-100 group-hover:bg-bop z-10"
+          className="hidden md:block absolute right-2  text-4xl text-white opacity-0 hover:scale-125 cursor-pointer transition-all ease-in duration-500 group-hover:opacity-100 group-hover:bg-bop z-10"
           onClick={() => handleClick("right")}
         />
       </div>
