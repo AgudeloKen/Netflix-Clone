@@ -34,12 +34,6 @@ export default function Home() {
           >
             <BsGithub className="text-2xl mx-4" /> Sign in with Github
           </button>
-          <button
-            onClick={() => signIn("facebook")}
-            className="w-4/5 mx-auto bg-facebook p-2 rounded-lg my-4 flex space-x-2"
-          >
-            <BsFacebook className="text-2xl mx-4" /> Sign in with Facebook
-          </button>
         </div>
       </section>
     </div>
